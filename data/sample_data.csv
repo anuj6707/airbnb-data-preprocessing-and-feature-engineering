@@ -1,3 +1,7 @@
+Due to size limitations only a part of the original dataset is uploaded here.
+URL_to_original_dataset="https://www.kaggle.com/datasets/arianazmoudeh/airbnbopendata"
+
+
 id,name,host_name,neighbourhood,latitude,longitude,price,minimum_nights,number_of_reviews,reviews_per_month,availability_365
 1001,Cozy Studio,John,Manhattan,40.7128,-74.006,120,2,45,1.2,180
 1002,Modern Apartment,Sarah,Brooklyn,40.6782,-73.9442,200,3,60,2.5,200
