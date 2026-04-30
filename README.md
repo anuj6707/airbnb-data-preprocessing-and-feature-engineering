@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 
-This project focuses on building a complete data preprocessing and analysis pipeline for an Airbnb listings dataset. The objective is to transform raw, inconsistent data into a clean, structured format and prepare it for analysis, visualization, and machine learning.
+This project focuses on building a structured data preprocessing and analysis pipeline for an Airbnb listings dataset. The goal is to transform raw, inconsistent data into a clean and meaningful format suitable for analysis.
 
 ---
 
@@ -13,19 +13,15 @@ This project focuses on building a complete data preprocessing and analysis pipe
 * Encode categorical variables
 * Detect and remove outliers
 * Perform feature engineering
-* Prepare dataset for analysis and modeling
+* Extract insights using exploratory data analysis (EDA)
 
 ---
 
 ## 📊 Dataset
 
-The dataset contains Airbnb listing data including:
+A sample dataset (`airbnb_raw_data.csv`) is included in this repository for demonstration purposes.
 
-* Listing and host details
-* Location information (latitude, longitude, neighbourhood)
-* Price and service fees
-* Reviews and ratings
-* Availability information
+Due to size limitations, the full dataset is not included.
 
 ---
 
@@ -35,43 +31,58 @@ The dataset contains Airbnb listing data including:
 
 * Filled text columns with `"unknown"`
 * Used median for numerical columns
-* Set logical defaults (e.g., `reviews_per_month = 0`)
+* Logical handling for review-related fields
 * Dropped rows with critical missing values (price, location)
 
 ---
 
 ### 🧽 2. Data Cleaning
 
-* Standardized column names (lowercase, underscores)
-* Removed redundant columns (e.g., `country_code`, `license`)
-* Fixed inconsistent data formats
+* Converted price and service fee to numeric format
+* Removed unnecessary columns (`country_code`, `license`)
+* Standardized column names
 
 ---
 
-### 🔢 3. Feature Encoding
+### 📉 3. Outlier Removal
 
-* Applied one-hot encoding for categorical variables (e.g., `instant_bookable`)
-
----
-
-### 📉 4. Outlier Detection & Removal *(planned)*
-
-* Identify extreme values in columns like `price`
-* Apply statistical methods (e.g., IQR) to remove outliers
+* Applied IQR (Interquartile Range) method
+* Removed extreme values from the `price` column
 
 ---
 
-### 🧠 5. Feature Engineering *(planned)*
+### 🔢 4. Feature Encoding
 
-* Create meaningful features (e.g., price per night, availability flags)
-* Enhance dataset for deeper analysis
+* One-hot encoding for `host_identity_verified`
+* Ordinal mapping for `cancellation_policy`
 
 ---
 
-### 📏 6. Scaling & Transformation *(planned)*
+### 🧠 5. Feature Engineering
 
-* Normalize numerical features using scaling techniques
-* Prepare data for machine learning models
+* `price_per_night` → normalized pricing
+* `availability_level` → categorized availability
+* `is_active` → listing activity indicator
+* `is_highly_rated` → rating-based feature
+* `host_experience` → categorized host listings
+
+---
+
+### 📊 6. Exploratory Data Analysis (EDA)
+
+* Price distribution visualization
+* Relationship analysis (price vs availability, ratings)
+* Correlation heatmap
+* Category distribution plots
+
+---
+
+## 📈 Key Insights
+
+* Most listings fall within lower to mid price ranges
+* Price distribution is right-skewed
+* Higher-rated listings tend to have higher prices
+* Availability shows moderate relationship with pricing
 
 ---
 
@@ -80,19 +91,41 @@ The dataset contains Airbnb listing data including:
 * Python
 * Pandas
 * NumPy
-* Scikit-learn
+* Matplotlib
+* Seaborn
+
+---
+
+## 📁 Project Structure
+
+```text
+airbnb-data-preprocessing-pipeline/
+│
+├── notebooks/
+│   └── preprocessing.ipynb
+│
+├── data/
+│   └── sample_airbnb_data.csv
+│
+├── outputs/
+│   └── cleaned_airbnb.csv
+│
+└── README.md
+```
 
 ---
 
 ## 🚀 Future Improvements
 
-* Data visualization and insights
-* Model building (price prediction, listing classification)
-* Advanced feature engineering
+* Add machine learning model for price prediction
+* Perform advanced feature engineering
+* Build interactive dashboards
 
 ---
 
 ## 👤 Author
 
-This project is part of a structured learning approach to build strong foundations in data preprocessing, analysis, and machine learning workflows.
+This project is part of a structured learning journey focused on developing real-world data preprocessing and analysis skills.
+The output dataset (`sample_cleaned_airbnb`) is a sample dataset. Due to size limitations, the full output dataset is not included.
+
 
