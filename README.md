@@ -1,12 +1,12 @@
-# Airbnb Data Preprocessing & Analysis Pipeline 🚀
+# Airbnb Data Preprocessing & Analysis Pipeline 
 
-## 📌 Overview
+##  Overview
 
 This project focuses on building a structured data preprocessing and analysis pipeline for an Airbnb listings dataset. The goal is to transform raw, inconsistent data into a clean and meaningful format suitable for analysis.
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 * Handle missing values using appropriate strategies
 * Clean and standardize raw dataset columns
@@ -17,13 +17,6 @@ This project focuses on building a structured data preprocessing and analysis pi
 
 ---
 
-## 📊 Dataset
-
-A sample dataset (`airbnb_raw_data.csv`) is included in this repository for demonstration purposes.
-
-Due to size limitations, the full dataset is not included.
-
----
 
 ## ⚙️ Pipeline Steps
 
@@ -96,22 +89,6 @@ Due to size limitations, the full dataset is not included.
 
 ---
 
-## 📁 Project Structure
-
-```text
-airbnb-data-preprocessing-pipeline/
-│
-├── notebooks/
-│   └── preprocessing.ipynb
-│
-├── data/
-│   └── sample_airbnb_data.csv
-│
-├── outputs/
-│   └── cleaned_airbnb.csv
-│
-└── README.md
-```
 
 ---
 
@@ -122,10 +99,5 @@ airbnb-data-preprocessing-pipeline/
 * Build interactive dashboards
 
 ---
-
-## 👤 Author
-
-This project is part of a structured learning journey focused on developing real-world data preprocessing and analysis skills.
-The output dataset (`sample_cleaned_airbnb`) is a sample dataset. Due to size limitations, the full output dataset is not included.
 
 
